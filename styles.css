@@ -1,0 +1,31 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contents {
+    display: flex;
+    flex-wrap: wrap;
+    width: 404px;
+}
+
+button {
+    width: 101px;
+    height: 101px;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+.text {
+    border: 2px solid black;
+    height: 100px;
+    width: 400px;
+    font-size: 90px;
+}
