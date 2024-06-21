@@ -6,9 +6,17 @@ function operate (operator, nr1, nr2){
         NUM2 = "";
     }
     else if (operator == "/"){
-        if (nr2 == 0) nr2 = 1;
-        NUM1 = (nr1/nr2).toFixed(2);
-        NUM2 = "";
+        if (nr2 == 0){
+            display.textContent = "ERROR!";
+            console.log("Error");
+            NUM1 = "";
+            NUM2 = "";
+            OPERATOR = "NONE";
+        }
+        else{
+            NUM1 = (nr1/nr2).toFixed(7);
+            NUM2 = "";
+        }
     }
     else if (operator == "+"){
         NUM1 = nr1+nr2;
@@ -18,7 +26,7 @@ function operate (operator, nr1, nr2){
         NUM1 = nr1-nr2;
         NUM2 = "";
     }
-    display.textContent = NUM1;
+    if (display.textContent != "ERROR!") display.textContent = NUM1;
 }
 
 function clickedNum (button){
